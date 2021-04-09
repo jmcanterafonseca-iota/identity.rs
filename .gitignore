@@ -17,3 +17,5 @@ book
 index.html
 
 !/bindings/wasm/static/index.html
+
+.DS_Store
