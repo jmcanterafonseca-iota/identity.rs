@@ -24,7 +24,7 @@ async fn main() -> Result<()> {
   let future: _ = resolution::resolve(&args[1], Default::default(), &client);
   let did_document: _ = future.await?;
 
-  println!("Resolution: {:#?}", did_document.document.unwrap().to_json());
+  println!("Resolution: {:#?}", did_document.document.unwrap());
 
   Ok(())
 }
