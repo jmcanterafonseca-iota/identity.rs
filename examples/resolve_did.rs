@@ -8,6 +8,7 @@ use std::env;
 use identity::iota::Client;
 use identity::iota::Result;
 use identity::did::resolution;
+use identity::core::ToJson;
 
 #[smol_potat::main]
 async fn main() -> Result<()> {
@@ -24,7 +25,7 @@ async fn main() -> Result<()> {
   let future: _ = resolution::resolve(&args[1], Default::default(), &client);
   let did_document: _ = future.await?;
 
-  println!("Resolution: {:#?}", did_document.document.unwrap());
+  println!("Resolution: {:#?}", did_document.document.to_json()?);
 
   Ok(())
 }

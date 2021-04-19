@@ -35,3 +35,7 @@ path = "merkle_key.rs"
 [[example]]
 name = "resolution"
 path = "resolution.rs"
+
+[[example]]
+name = "create_credential"
+path = "create_credential.rs"
